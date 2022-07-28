@@ -3,9 +3,9 @@ package homework2.publication;
 
 import java.util.Objects;
 
-public class Book extends Publications{
+public class Book extends Publications {
 
-    private String author;
+    private final String author;
 
     public Book(String title, String author, int pages, boolean available, Genre genre) {
         super(title, pages, available, genre);
@@ -18,7 +18,7 @@ public class Book extends Publications{
 
     @Override
     public String toString() {
-        String available = (this.available)?"Available":"Not Available";
+        String available = (this.available) ? "Available" : "Not Available";
         return "Book{" +
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
@@ -35,15 +35,15 @@ public class Book extends Publications{
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj){
+        if (this == obj) {
             return true;
         }
-        if (obj == null){
+        if (obj == null) {
             return false;
         }
-        if (obj instanceof Book){
+        if (obj instanceof Book) {
             Book book = (Book) obj;
-            if(Objects.equals(book.getTitle(), this.title) && Objects.equals(book.getAuthor(), this.author) && (book.getPages()==this.pages) && (book.getGenre()==this.genre)){
+            if (Objects.equals(book.getTitle(), this.title) && Objects.equals(book.getAuthor(), this.author) && (book.getPages() == this.pages) && (book.getGenre() == this.genre)) {
                 return true;
             }
         }

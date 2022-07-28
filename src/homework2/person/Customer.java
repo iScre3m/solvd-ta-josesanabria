@@ -1,10 +1,11 @@
 package homework2.person;
+
 import homework2.publication.Genre;
 import homework2.publication.Publications;
 
 import java.util.ArrayList;
 
-public class Customer extends Person{
+public final class Customer extends Person {
 
     private Genre preferences;
 

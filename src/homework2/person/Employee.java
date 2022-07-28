@@ -4,7 +4,7 @@ import homework2.publication.Publications;
 
 import java.util.ArrayList;
 
-public class Employee extends Person {
+public final class Employee extends Person {
 
     public Employee(String name) {
         super(name);

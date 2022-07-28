@@ -11,6 +11,10 @@ abstract public class Person {
     public Person() {
     }
 
+    public final void greet(Person person) {
+        System.out.println("Hello " + person.getName());
+    }
+
     public Person(String name) {
         this.name = name;
     }

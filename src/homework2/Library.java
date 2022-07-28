@@ -1,6 +1,7 @@
 package homework2;
 
-import homework2.person.*;
+import homework2.person.Customer;
+import homework2.person.Employee;
 import homework2.publication.*;
 
 import java.util.ArrayList;
@@ -17,6 +18,9 @@ public class Library {
         Customer customer1 = new Customer("Charles", Genre.CLASSICS);
         Employee employee1 = new Employee("Olga");
 
+        employee1.greet(customer1);
+        customer1.greet(employee1);
+
         ArrayList<Publications> publicationList = new ArrayList<>();
         publicationList.add(book1);
         publicationList.add(book2);
@@ -24,10 +28,13 @@ public class Library {
         publicationList.add(magazine1);
         publicationList.add(book3);
 
-        employee1.changeAvailability(book3);
-        System.out.println("Publication is " + ((book3.getAvailable()) ? "Available" : "Not Available"));
+        customer1.search(publicationList);
+
+        employee1.changeAvailability(book2);
+        System.out.println("Publication is " + ((book2.getAvailable()) ? "Available" : "Not Available"));
 
         customer1.search(publicationList);
+
         book1.samePublication(book2);
         book1.samePublication(book3);
         book3.samePublication(magazine1);
