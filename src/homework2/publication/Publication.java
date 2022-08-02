@@ -1,14 +1,14 @@
 package homework2.publication;
 
 
-public abstract class Publications {
+public abstract class Publication {
 
     protected String title;
     protected int pages;
     protected boolean available;
     protected Genre genre;
 
-    public Publications(String title, int pages, boolean available, Genre genre) {
+    public Publication(String title, int pages, boolean available, Genre genre) {
         this.title = title;
         this.pages = pages;
         this.available = available;
@@ -46,7 +46,7 @@ public abstract class Publications {
                 '}';
     }
 
-    public void samePublication(Publications publication) {
+    public final void isSamePublication(Publication publication) {
 
         if (this.equals(publication)) {
             System.out.println(this.title + " and " + publication.getTitle() + " are the same");

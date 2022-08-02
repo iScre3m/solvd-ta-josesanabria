@@ -1,9 +1,7 @@
 package homework2.person;
 
 import homework2.publication.Genre;
-import homework2.publication.Publications;
-
-import java.util.ArrayList;
+import homework2.publication.Publication;
 
 public final class Customer extends Person {
 
@@ -25,11 +23,11 @@ public final class Customer extends Person {
 
 
     @Override
-    public void search(ArrayList<Publications> publicationList) {
-        for (Publications publication : publicationList) {
-            if (((publication.getGenre()).compareTo(preferences)) == 0) {
-                System.out.println(publication);
-            }
-        }
+    public void greet(Person person) {
+        System.out.println("Hello " + person.getName());
+    }
+
+    public Publication choosePublication(Publication[] publications) {
+        return publications[(int) Math.floor(((Math.random() * (publications.length))))];
     }
 }

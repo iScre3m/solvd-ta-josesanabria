@@ -4,7 +4,7 @@ import homework2.person.Customer;
 import homework2.person.Employee;
 import homework2.publication.*;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Library {
 
@@ -21,23 +21,15 @@ public class Library {
         employee1.greet(customer1);
         customer1.greet(employee1);
 
-        ArrayList<Publications> publicationList = new ArrayList<>();
-        publicationList.add(book1);
-        publicationList.add(book2);
-        publicationList.add(newsPaper1);
-        publicationList.add(magazine1);
-        publicationList.add(book3);
+        Publication[] publications = {book1, book2, newsPaper1, magazine1, book3};
 
-        customer1.search(publicationList);
-
+        System.out.println("publications = " + Arrays.toString(publications));
+        System.out.println("publication chosen = " + customer1.choosePublication(employee1.search(publications, customer1)));
         employee1.changeAvailability(book2);
-        System.out.println("Publication is " + ((book2.getAvailable()) ? "Available" : "Not Available"));
-
-        customer1.search(publicationList);
-
-        book1.samePublication(book2);
-        book1.samePublication(book3);
-        book3.samePublication(magazine1);
+        System.out.println("Publication " + book2.getTitle() + " is " + ((book2.getAvailable()) ? "Available" : "Not Available"));
+        book1.isSamePublication(book2);
+        book1.isSamePublication(book3);
+        book3.isSamePublication(magazine1);
     }
 
 }

@@ -1,7 +1,7 @@
 package homework2.publication;
 
 
-public class Paper extends Publications{
+public class Paper extends Publication {
 
     private String author;
 

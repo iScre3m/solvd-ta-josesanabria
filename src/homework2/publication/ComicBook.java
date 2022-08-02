@@ -1,10 +1,10 @@
 package homework2.publication;
 
-public class ComicBook extends Publications{
+public class ComicBook extends Publication {
 
-    private String editorial;
+    private final String editorial;
 
-    public ComicBook(String title,String editorial, int pages, boolean available, Genre genre) {
+    public ComicBook(String title, String editorial, int pages, boolean available, Genre genre) {
         super(title, pages, available, genre);
         this.editorial = editorial;
     }

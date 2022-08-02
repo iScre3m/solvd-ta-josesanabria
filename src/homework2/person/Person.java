@@ -1,9 +1,5 @@
 package homework2.person;
 
-import homework2.publication.Publications;
-
-import java.util.ArrayList;
-
 abstract public class Person {
 
     protected String name;
@@ -11,9 +7,7 @@ abstract public class Person {
     public Person() {
     }
 
-    public final void greet(Person person) {
-        System.out.println("Hello " + person.getName());
-    }
+    public abstract void greet(Person person);
 
     public Person(String name) {
         this.name = name;
@@ -26,6 +20,4 @@ abstract public class Person {
     public void setName(String name) {
         this.name = name;
     }
-
-    public abstract void search(ArrayList<Publications> publicationList);
 }

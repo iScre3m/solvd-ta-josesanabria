@@ -2,8 +2,8 @@ package homework2.publication;
 
 import java.util.Objects;
 
-public class NewsPaper extends Publications{
-    private String editorial;
+public class NewsPaper extends Publication {
+    private final String editorial;
 
     public NewsPaper(String title, String editorial, int pages, boolean available, Genre genre) {
         super(title, pages, available, genre);
@@ -16,14 +16,12 @@ public class NewsPaper extends Publications{
 
     @Override
     public String toString() {
-        String available = (this.available)?"Available":"Not Available";
-        return "NewsPaper{" +
-                "date='" + title + '\''+
-                ", editorial='" + editorial + '\'' +
-                ", pages=" + pages +
+        String available = (this.available) ? "Available" : "Not Available";
+        return "NewsPaper " + title + '\'' +
+                ", editorial: '" + editorial + '\'' +
+                ", pages: " + pages +
                 ", " + available +
-                ", genre=" + genre +
-                '}';
+                ", genre: " + genre;
     }
 
     @Override
@@ -33,15 +31,15 @@ public class NewsPaper extends Publications{
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj){
+        if (this == obj) {
             return true;
         }
-        if (obj == null){
+        if (obj == null) {
             return false;
         }
-        if (obj instanceof NewsPaper){
+        if (obj instanceof NewsPaper) {
             NewsPaper newsPaper = (NewsPaper) obj;
-            if(Objects.equals(newsPaper.getTitle(), this.title) && Objects.equals(newsPaper.getEditorial(), this.editorial) && (newsPaper.getPages()==this.pages) && (newsPaper.getGenre()==this.genre)){
+            if (Objects.equals(newsPaper.getTitle(), this.title) && Objects.equals(newsPaper.getEditorial(), this.editorial) && (newsPaper.getPages() == this.pages) && (newsPaper.getGenre() == this.genre)) {
                 return true;
             }
         }

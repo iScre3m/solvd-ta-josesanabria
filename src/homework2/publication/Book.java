@@ -3,7 +3,7 @@ package homework2.publication;
 
 import java.util.Objects;
 
-public class Book extends Publications {
+public class Book extends Publication {
 
     private final String author;
 
@@ -19,13 +19,11 @@ public class Book extends Publications {
     @Override
     public String toString() {
         String available = (this.available) ? "Available" : "Not Available";
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", pages=" + pages +
+        return "Book " + title + '\'' +
+                ", author: '" + author + '\'' +
+                ", pages: " + pages +
                 ", " + available +
-                ", genre=" + genre +
-                '}';
+                ", genre: " + genre;
     }
 
     @Override
