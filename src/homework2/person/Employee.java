@@ -1,12 +1,23 @@
 package homework2.person;
 
+import homework2.Library;
 import homework2.publication.Publication;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public final class Employee extends Person {
 
+    private static Logger logger = LogManager.getLogger(Library.class.getName());
+
+    static {
+        logger.info("Employee arrives and opens the library");
+    }
+
+
     @Override
     public void greet(Person person) {
-        System.out.println("Hello " + person.getName() + ", welcome to the library");
+        logger.log(Level.getLevel("DIALOG"), "Hello " + person.getName() + ", welcome to the library");
     }
 
     public Employee(String name) {
@@ -20,21 +31,25 @@ public final class Employee extends Person {
                 publicationCounter++;
             }
         }
-        Publication[] publications2 = new Publication[publicationCounter];
+        Publication[] publicationsFound = new Publication[publicationCounter];
         publicationCounter = 0;
         for (Publication publication : publications) {
             if (((publication.getGenre()).compareTo(customer.getPreferences())) == 0) {
-                publications2[publicationCounter] = publication;
+                publicationsFound[publicationCounter] = publication;
                 publicationCounter++;
             }
         }
-        return publications2;
+        return publicationsFound;
     }
-
 
     public void changeAvailability(Publication publication) {
         if (publication.getAvailable()) {
             publication.setAvailable(!publication.getAvailable());
         }
     }
+
+    public void checkSamePublication(Publication publication, Publication publication2) {
+        publication.isSamePublication(publication2);
+    }
+
 }

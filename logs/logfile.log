@@ -1,0 +1,9 @@
+18:48:07.198 [main] INFO  homework2.Library - Employee arrives and opens the library
+18:48:07.200 [main] INFO  homework2.Library - Cling cling, a person enters the library
+18:48:07.200 [main] INFO  homework2.Library - Cling cling, a person enters the library
+18:48:07.201 [main] DIALOG homework2.Library - Hello Charles, welcome to the library
+18:48:07.201 [main] DIALOG homework2.Library - Hello Olga
+18:48:07.216 [main] INFO  homework2.Library - Publication chosen = NewsPaper '20 of May 2022', editorial: 'The New York Times', pages: 45, Available, genre: CLASSICS, id: 3
+18:48:07.219 [main] WARN  homework2.Library - Publication 20 of May 2022 is Not Available
+18:48:07.221 [main] WARN  homework2.Library - The Hacienda and The Hacienda are the same publication
+18:48:07.224 [main] INFO  homework2.Library - The current bill of Charles is: $ 14107.50

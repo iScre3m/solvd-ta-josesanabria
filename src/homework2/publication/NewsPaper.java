@@ -2,11 +2,11 @@ package homework2.publication;
 
 import java.util.Objects;
 
-public class NewsPaper extends Publication {
+public class NewsPaper extends Publication implements IBuyable {
     private final String editorial;
 
-    public NewsPaper(String title, String editorial, int pages, boolean available, Genre genre) {
-        super(title, pages, available, genre);
+    public NewsPaper(String title, String editorial, int pages, boolean available, Genre genre, String content) {
+        super(title, pages, available, genre, content);
         this.editorial = editorial;
     }
 
@@ -17,11 +17,12 @@ public class NewsPaper extends Publication {
     @Override
     public String toString() {
         String available = (this.available) ? "Available" : "Not Available";
-        return "NewsPaper " + title + '\'' +
+        return "NewsPaper '" + title + '\'' +
                 ", editorial: '" + editorial + '\'' +
                 ", pages: " + pages +
                 ", " + available +
-                ", genre: " + genre;
+                ", genre: " + genre +
+                ", id: " + id;
     }
 
     @Override
@@ -44,5 +45,19 @@ public class NewsPaper extends Publication {
             }
         }
         return false;
+    }
+
+
+    @Override
+    public double calculateBuyPrice(int amountOfCopies) {
+        int countLetters = 0;
+        for (int i = 0; i < this.content.length(); i++) {
+            countLetters++;
+        }
+        for (int i = 0; i < this.title.length(); i++) {
+            countLetters++;
+        }
+        this.setAvailable(false);
+        return 1.10 * this.pages * countLetters * amountOfCopies;
     }
 }

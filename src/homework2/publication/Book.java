@@ -3,12 +3,12 @@ package homework2.publication;
 
 import java.util.Objects;
 
-public class Book extends Publication {
+public class Book extends Publication implements IBuyable, IDiscount {
 
     private final String author;
 
-    public Book(String title, String author, int pages, boolean available, Genre genre) {
-        super(title, pages, available, genre);
+    public Book(String title, String author, int pages, boolean available, Genre genre, String content) {
+        super(title, pages, available, genre, content);
         this.author = author;
     }
 
@@ -19,11 +19,12 @@ public class Book extends Publication {
     @Override
     public String toString() {
         String available = (this.available) ? "Available" : "Not Available";
-        return "Book " + title + '\'' +
+        return "Book '" + title + '\'' +
                 ", author: '" + author + '\'' +
                 ", pages: " + pages +
                 ", " + available +
-                ", genre: " + genre;
+                ", genre: " + genre +
+                ", id: " + id;
     }
 
     @Override
@@ -49,4 +50,22 @@ public class Book extends Publication {
     }
 
 
+    @Override
+    public double calculateBuyPrice(int amountOfCopies) {
+        int countLetters = 0;
+        for (int i = 0; i < this.content.length(); i++) {
+            countLetters++;
+        }
+        for (int i = 0; i < this.title.length(); i++) {
+            countLetters++;
+        }
+        this.setAvailable(false);
+        return 2.35 * this.pages * countLetters * amountOfCopies;
+    }
+
+
+    @Override
+    public double addDiscount() {
+        return discountValue;
+    }
 }
