@@ -1,6 +1,9 @@
 package homework2.publication;
 
 
+import homework2.interfaces.IBuyable;
+import homework2.interfaces.IDiscount;
+
 import java.util.Objects;
 
 public class Book extends Publication implements IBuyable, IDiscount {

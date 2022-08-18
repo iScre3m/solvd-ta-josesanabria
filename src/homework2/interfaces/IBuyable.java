@@ -1,4 +1,4 @@
-package homework2.publication;
+package homework2.interfaces;
 
 public interface IBuyable {
 

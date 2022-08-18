@@ -1,6 +1,7 @@
 package homework2.person;
 
 import homework2.Library;
+import homework2.exceptions.NoPublicationsFoundException;
 import homework2.publication.Publication;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -24,12 +25,15 @@ public final class Employee extends Person {
         super(name);
     }
 
-    public Publication[] search(Publication[] publications, Customer customer) {
+    public Publication[] search(Publication[] publications, Customer customer) throws NoPublicationsFoundException {
         int publicationCounter = 0;
         for (Publication publication : publications) {
             if (((publication.getGenre()).compareTo(customer.getPreferences())) == 0) {
                 publicationCounter++;
             }
+        }
+        if (publicationCounter == 0) {
+            throw new NoPublicationsFoundException("Couldn't find any publication with the preferences of the customer");
         }
         Publication[] publicationsFound = new Publication[publicationCounter];
         publicationCounter = 0;

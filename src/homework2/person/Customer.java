@@ -1,6 +1,9 @@
 package homework2.person;
 
 import homework2.Library;
+import homework2.exceptions.NoNegativeNumberException;
+import homework2.exceptions.NoZeroNumberException;
+import homework2.exceptions.NumberTooBigException;
 import homework2.publication.*;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -8,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 public final class Customer extends Person {
 
-    private static Logger logger = LogManager.getLogger(Library.class.getName());
+    private static final Logger logger = LogManager.getLogger(Library.class.getName());
 
     private Genre preferences;
     private double bill;
@@ -23,8 +26,15 @@ public final class Customer extends Person {
         return bill;
     }
 
-    public void increaseBill(Publication publication, int copies) {
+    public void increaseBill(Publication publication, int copies) throws NumberTooBigException, NoNegativeNumberException, NoZeroNumberException {
         double discount = 1.00;
+        if (copies > 10) {
+            throw new NumberTooBigException("Can not make more than 10 copies");
+        } else if (copies < 0) {
+            throw new NoNegativeNumberException("Can not make negative amount of copies");
+        } else if (copies == 0) {
+            throw new NoZeroNumberException("Can not make 0 amount of copies");
+        }
         if (publication instanceof Book) {
             discount = ((Book) publication).addDiscount();
             bill += ((Book) publication).calculateBuyPrice(copies) * discount;

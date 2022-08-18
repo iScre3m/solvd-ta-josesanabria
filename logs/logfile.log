@@ -1,9 +1,52 @@
-18:48:07.198 [main] INFO  homework2.Library - Employee arrives and opens the library
-18:48:07.200 [main] INFO  homework2.Library - Cling cling, a person enters the library
-18:48:07.200 [main] INFO  homework2.Library - Cling cling, a person enters the library
-18:48:07.201 [main] DIALOG homework2.Library - Hello Charles, welcome to the library
-18:48:07.201 [main] DIALOG homework2.Library - Hello Olga
-18:48:07.216 [main] INFO  homework2.Library - Publication chosen = NewsPaper '20 of May 2022', editorial: 'The New York Times', pages: 45, Available, genre: CLASSICS, id: 3
-18:48:07.219 [main] WARN  homework2.Library - Publication 20 of May 2022 is Not Available
-18:48:07.221 [main] WARN  homework2.Library - The Hacienda and The Hacienda are the same publication
-18:48:07.224 [main] INFO  homework2.Library - The current bill of Charles is: $ 14107.50
+23:58:31.836 [main] INFO  homework2.Library - Employee arrives and opens the library
+23:58:31.838 [main] INFO  homework2.Library - Cling cling, a person enters the library
+23:58:31.839 [main] INFO  homework2.Library - Cling cling, a person enters the library
+23:58:31.840 [main] DIALOG homework2.Library - Hello Charles, welcome to the library
+23:58:31.840 [main] DIALOG homework2.Library - Hello Olga
+23:58:31.841 [main] WARN  homework2.Library - homework2.exceptions.NoPublicationsFoundException: Couldn't find any publication with the preferences of the customer
+23:58:31.855 [main] INFO  homework2.Library - Publication chosen = Book 'Moby-Dick', author: 'Herman Melville', pages: 360, Available, genre: CLASSICS, id: 2
+23:58:31.859 [main] WARN  homework2.Library - Publication Moby-Dick is Not Available
+23:58:31.862 [main] WARN  homework2.Library - The Hacienda and The Hacienda are the same publication
+23:58:31.862 [main] ERROR homework2.Library - homework2.exceptions.NoNegativeNumberException: Can not make negative amount of copies
+23:58:31.864 [main] INFO  homework2.Library - The current bill of Charles is: $ 0.00
+23:58:50.902 [main] INFO  homework2.Library - Employee arrives and opens the library
+23:58:50.904 [main] INFO  homework2.Library - Cling cling, a person enters the library
+23:58:50.905 [main] INFO  homework2.Library - Cling cling, a person enters the library
+23:58:50.906 [main] DIALOG homework2.Library - Hello Charles, welcome to the library
+23:58:50.906 [main] DIALOG homework2.Library - Hello Olga
+23:58:50.906 [main] WARN  homework2.Library - homework2.exceptions.NoPublicationsFoundException: Couldn't find any publication with the preferences of the customer
+23:58:50.920 [main] INFO  homework2.Library - Publication chosen = NewsPaper '20 of May 2022', editorial: 'The New York Times', pages: 45, Available, genre: CLASSICS, id: 3
+23:58:50.924 [main] WARN  homework2.Library - Publication 20 of May 2022 is Not Available
+23:58:50.926 [main] WARN  homework2.Library - The Hacienda and The Hacienda are the same publication
+23:58:50.928 [main] INFO  homework2.Library - The current bill of Charles is: $ 14107.50
+00:05:06.576 [main] INFO  homework2.Library - Employee arrives and opens the library
+00:05:06.579 [main] INFO  homework2.Library - Cling cling, a person enters the library
+00:05:06.580 [main] INFO  homework2.Library - Cling cling, a person enters the library
+00:05:06.581 [main] DIALOG homework2.Library - Hello Charles, welcome to the library
+00:05:06.581 [main] DIALOG homework2.Library - Hello Olga
+00:05:06.581 [main] WARN  homework2.Library - homework2.exceptions.NoPublicationsFoundException: Couldn't find any publication with the preferences of the customer
+00:05:06.594 [main] INFO  homework2.Library - Publication chosen = NewsPaper '20 of May 2022', editorial: 'The New York Times', pages: 45, Available, genre: CLASSICS, id: 3
+00:05:06.599 [main] WARN  homework2.Library - Publication 20 of May 2022 is Not Available
+00:05:06.601 [main] WARN  homework2.Library - The Hacienda and The Hacienda are the same publication
+00:08:10.272 [main] INFO  homework2.Library - Employee arrives and opens the library
+00:08:10.274 [main] INFO  homework2.Library - Cling cling, a person enters the library
+00:08:10.275 [main] INFO  homework2.Library - Cling cling, a person enters the library
+00:08:10.276 [main] DIALOG homework2.Library - Hello Charles, welcome to the library
+00:08:10.276 [main] DIALOG homework2.Library - Hello Olga
+00:08:10.277 [main] WARN  homework2.Library - homework2.exceptions.NoPublicationsFoundException: Couldn't find any publication with the preferences of the customer
+00:08:10.290 [main] INFO  homework2.Library - Publication chosen = NewsPaper '20 of May 2022', editorial: 'The New York Times', pages: 45, Available, genre: CLASSICS, id: 3
+00:08:10.294 [main] WARN  homework2.Library - Publication 20 of May 2022 is Not Available
+00:08:10.296 [main] INFO  homework2.Library - The current bill of Charles is: $ 14107.50
+00:08:10.298 [main] WARN  homework2.Library - The Hacienda and The Hacienda are the same publication
+00:08:10.299 [main] ERROR homework2.Library - homework2.exceptions.DuplicatedPublicationException: The Hacienda and The Hacienda are the same publication
+00:08:28.011 [main] INFO  homework2.Library - Employee arrives and opens the library
+00:08:28.013 [main] INFO  homework2.Library - Cling cling, a person enters the library
+00:08:28.014 [main] INFO  homework2.Library - Cling cling, a person enters the library
+00:08:28.015 [main] DIALOG homework2.Library - Hello Charles, welcome to the library
+00:08:28.015 [main] DIALOG homework2.Library - Hello Olga
+00:08:28.015 [main] WARN  homework2.Library - homework2.exceptions.NoPublicationsFoundException: Couldn't find any publication with the preferences of the customer
+00:08:28.028 [main] INFO  homework2.Library - Publication chosen = Book 'Moby-Dick', author: 'Herman Melville', pages: 360, Available, genre: CLASSICS, id: 2
+00:08:28.031 [main] WARN  homework2.Library - Publication Moby-Dick is Not Available
+00:08:28.034 [main] INFO  homework2.Library - The current bill of Charles is: $ 27410.40
+00:08:28.036 [main] WARN  homework2.Library - The Hacienda and The Hacienda are the same publication
+00:08:28.036 [main] ERROR homework2.Library - homework2.exceptions.DuplicatedPublicationException: The Hacienda and The Hacienda are the same publication

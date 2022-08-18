@@ -1,5 +1,7 @@
 package homework2.publication;
 
+import homework2.interfaces.IBuyable;
+
 import java.util.Objects;
 
 public class NewsPaper extends Publication implements IBuyable {

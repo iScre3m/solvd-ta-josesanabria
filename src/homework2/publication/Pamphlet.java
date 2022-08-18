@@ -1,5 +1,8 @@
 package homework2.publication;
 
+import homework2.interfaces.ICopyable;
+import homework2.interfaces.IDiscount;
+
 public class Pamphlet extends Publication implements ICopyable, IDiscount {
     public Pamphlet(String title, int pages, boolean available, Genre genre, String content) {
         super(title, pages, available, genre, content);

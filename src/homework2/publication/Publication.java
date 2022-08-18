@@ -2,6 +2,7 @@ package homework2.publication;
 
 
 import homework2.Library;
+import homework2.exceptions.DuplicatedPublicationException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -67,6 +68,7 @@ public abstract class Publication {
 
         if (this.equals(publication)) {
             logger.warn(this.title + " and " + publication.getTitle() + " are the same publication");
+            throw new DuplicatedPublicationException(this.title + " and " + publication.getTitle() + " are the same publication");
         } else
             logger.warn(this.title + " and " + publication.getTitle() + " are different publications");
     }
