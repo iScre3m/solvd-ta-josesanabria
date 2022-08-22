@@ -51,3 +51,39 @@ Task 2: Improve your current classes hierarchy including next points:
 - Replace System.out.print() by “java.util.logging.Logger” usage.
 - Use different log levels.
 - Configure logging of messages to the console and file at the same time using Java logging configuration.
+
+Homework 6:
+
+- Add 5 collections to your existent hierarchy (as attributes of your entity classes)
+  and methods for working with them (add,remove,replace,size, etc.)
+- Create custom LinkedList with generic and use it as part of your hierarchy with methods (add,remove,size,print all)
+
+Homework 7:
+
+1. Create new Maven project and move your existent packages/classes there.
+2. Add some dependencies from maven central repo into your project’s pom.xml (Apache FileUtils library)
+3. Build jar file and deploy to the local repository using maven phases
+4. Add and configure 2 Plugins:
+
+- maven compiler plugin http://maven.apache.org/plugins/maven-compiler-plugin/
+  Here you’ll need to configure some specific java version for your code compilation
+- maven-dependency-plugin http://maven.apache.org/plugins/maven-dependency-plugin/
+  Using this plugin you’ll need to build list of dependencies that your project use
+
+5. Run mvn for different phases from the Maven lifecycle. Check the result.
+
+- Note: Push new Maven project into fresh repository in github! Don't forget about .gitignore usage
+
+Homework 8:
+
+1. 
+- Prepare some .txt file with some random text and add it to your project.
+- Read text from the file and calculate the numbers of the unique words.
+- Write the result to another file.
+- The main requirement is: using apache StringUtils and FileUtils to implement it with minimum lines of code.
+- To get text sample you can copy some article from Wikipedia.
+
+2. 
+- Use at least 5 different methods from StringUtils and 5 from FileUtils. 
+- To process some strings and some files on your local computer.
+- Put code for this task into separate runner class with main() method

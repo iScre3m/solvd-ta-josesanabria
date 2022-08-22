@@ -60,8 +60,7 @@ public abstract class Publication {
         return "Publication '" + title + '\'' +
                 ", pages: " + pages +
                 ", " + available +
-                ", genre: " + genre +
-                ", id: " + id;
+                ", genre: " + genre;
     }
 
     public final void isSamePublication(Publication publication) {

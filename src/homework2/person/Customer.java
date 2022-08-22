@@ -9,17 +9,18 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
+
 public final class Customer extends Person {
 
     private static final Logger logger = LogManager.getLogger(Library.class.getName());
 
     private Genre preferences;
-    private double bill;
+    private double bill = 0;
 
-    public Customer(String name, Genre preferences, double bill) {
+    public Customer(String name, Genre preferences) {
         super(name);
         this.preferences = preferences;
-        this.bill = bill;
     }
 
     public double getBill() {
@@ -42,6 +43,8 @@ public final class Customer extends Person {
             bill += ((NewsPaper) publication).calculateBuyPrice(copies) * discount;
         } else if (publication instanceof Pamphlet) {
             bill += ((Pamphlet) publication).calculateCopyPrice(copies) * discount;
+        } else if (publication instanceof ComicBook) {
+            bill += ((ComicBook) publication).calculateBuyPrice(copies);
         }
     }
 
@@ -56,11 +59,11 @@ public final class Customer extends Person {
 
     @Override
     public void greet(Person person) {
-        logger.log(Level.getLevel("DIALOG"), "Hello " + person.getName());
+        logger.log(Level.getLevel("DIALOG"), this.name + " - Hello " + person.getName());
     }
 
-    public Publication choosePublication(Publication[] publications) {
-        return publications[(int) Math.floor(((Math.random() * (publications.length))))];
+    public Publication choosePublication(List<Publication> publications) {
+        return publications.get((int) Math.floor(((Math.random() * (publications.size())))));
     }
 
 }

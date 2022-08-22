@@ -1,6 +1,8 @@
 package homework2.publication;
 
-public class ComicBook extends Publication {
+import homework2.interfaces.IBuyable;
+
+public class ComicBook extends Publication implements IBuyable {
 
     private final String editorial;
 
@@ -14,4 +16,16 @@ public class ComicBook extends Publication {
     }
 
 
+    @Override
+    public double calculateBuyPrice(int amountOfCopies) {
+        int countLetters = 0;
+        for (int i = 0; i < this.content.length(); i++) {
+            countLetters++;
+        }
+        for (int i = 0; i < this.title.length(); i++) {
+            countLetters++;
+        }
+        this.setAvailable(false);
+        return 1.35 * this.pages * countLetters * amountOfCopies;
+    }
 }

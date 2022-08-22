@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 abstract public class Person {
 
-    private static Logger logger = LogManager.getLogger(Library.class.getName());
+    private static final Logger logger = LogManager.getLogger(Library.class.getName());
 
     protected String name;
 
@@ -29,8 +29,8 @@ abstract public class Person {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String toString() {
+        return "name: " + name;
     }
-
 }
